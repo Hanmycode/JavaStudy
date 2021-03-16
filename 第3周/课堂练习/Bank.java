@@ -6,13 +6,22 @@ public class Bank {
 
 	public static void main(String[] args) {
 		int choose = menu();
-		while(choose!=5){
-			switch(choose){
-			case 1:createAccount(); break;
-			case 2:dispose(); break;
-			case 3:withdraw(); break;
-			case 4:balance(); break;
-			default:System.out.println("输入无效，请重新选择!");
+		while (choose != 5) {
+			switch (choose) {
+			case 1:
+				createAccount();
+				break;
+			case 2:
+				dispose();
+				break;
+			case 3:
+				withdraw();
+				break;
+			case 4:
+				balance();
+				break;
+			default:
+				System.out.println("输入无效，请重新选择!");
 			}
 			choose = menu();
 		}
@@ -30,14 +39,12 @@ public class Bank {
 		System.out.println("3. Withdraw");
 		System.out.println("4. Bbalance");
 		System.out.println("5. Exit");
-		System.out.println("Please choose(1~5)");
-		
+		System.out.print("Please choose(1~5): ");
+
 		Scanner scan = new Scanner(System.in);
 		choice = scan.nextInt();
 		return choice;
 	}
-
-
 
 	public static void createAccount() {
 		System.out.println("您选择了开户！");
@@ -51,9 +58,8 @@ public class Bank {
 		System.out.println("您选择了存款！");
 	}
 
-    public static void balance(){
-    	System.out.println("您选择了查看余额！");
-    }
-
+	public static void balance() {
+		System.out.println("您选择了查看余额！");
+	}
 
 }
