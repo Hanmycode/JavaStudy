@@ -1,21 +1,21 @@
-package Student.vo;
+package ScoreStatistics.vo;
 
-public class Student {
+public class StudentResult {
 	private String id;
 	private String name;
 	private String gender;
-	private String province;
-	
-	public Student() {
+	private double avg;
+
+	public StudentResult() {
 		super();
 	}
 
-	public Student(String id, String name, String gender, String province) {
+	public StudentResult(String id, String name, String gender, double avg) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
-		this.province = province;
+		this.avg = avg;
 	}
 
 	public String getId() {
@@ -42,19 +42,18 @@ public class Student {
 		this.gender = gender;
 	}
 
-	public String getProvince() {
-		return province;
+	public double getAvg() {
+		return avg;
 	}
 
-	public void setProvince(String province) {
-		this.province = province;
+	public void setAvg(double avg) {
+		this.avg = avg;
 	}
 
 	@Override
 	public String toString() {
-		return id +",\t"+ name +",\t"+ gender +",\t"+ province;
+		String msg = null;
+		msg += this.id + "\t" + this.name + "\t" + this.gender + "\t" + this.avg;
+		return msg;
 	}
-	
-	
-	
 }
