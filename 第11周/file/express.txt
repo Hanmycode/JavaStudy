@@ -1,0 +1,5 @@
+add(1,2)
+sub(6,3)
+max(6,7)
+min(7,8)
+doubleMe(9)
